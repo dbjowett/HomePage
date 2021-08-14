@@ -28,6 +28,10 @@ nav {
     color: white;
 }
 
+nav li a {
+    color: white;
+}
+
 h3 {
     font-size: 25px;
     margin: 10px;
@@ -39,6 +43,14 @@ h3 {
     display: flex;
     flex-direction: row;
     align-items: baseline;
+}
+
+#logo img {
+    height: 20px;
+    background-color: white;
+    margin-left: 7px;
+    padding: 2px;
+    border-radius: 3px;
 }
 
 .fa-code {
@@ -102,29 +114,34 @@ h3 {
 
 section {
     display: flex;
-    height: 80vh;
+    height: 50vh;
     justify-content: center;
     align-items: center;
+    border: 3px dashed lightblue;
 }
 
 .hero {
-    height: 60%;
-    width: 100%;
+    height: auto;
+    width: 90%;
     position: relative; 
+    /* border: 1px solid pink; */
 }
 
 .hero img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    min-width: 390px;
+    /* border: 1px solid yellow; */
 }
 
 .headline{
     position: absolute;
+    min-width: 322px;
     z-index: 3;
     top: 37%;
-    left: 15%; 
-    font-size: 75px;
+    left: 20%;
+    font-size: 50px;
     font-family: 'Cutive Mono', monospace;
     letter-spacing: -1px;
     color: #0F1538;
@@ -133,7 +150,7 @@ section {
 .bottom {
     height:100vh;
     position: relative;
-    margin-top: 75px;
+    margin-top: 140px;
 }
 
 .shape {
@@ -161,3 +178,25 @@ section {
     pointer-events: all;
     transform: translateY(0);
 }
+
+
+@media only screen and (max-width: 700px) {
+    body {
+      background-color: lightblue;
+    }
+  }
+
+ /* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+    body {
+        background-color: pink;
+  } }
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { ... }
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { ... }
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { ... }
