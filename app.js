@@ -4,8 +4,25 @@ const logo = document.querySelector('#logo');
 const navlist = document.querySelector('.navlist');
 const headline = document.querySelector('.headline');
 const shape = document.querySelector('.shape');
+// const button = document.querySelector('.copyEmail');
 
 
+var clipboard = new ClipboardJS('.copyEmail');
+
+clipboard.on('success', e => {
+    console.info('Action:', e.action);
+    console.info('Text:', e.text);
+    console.info('Trigger:', e.trigger);
+    
+    e.clearSelection();
+  });
+  
+  clipboard.on('error', e => {
+    console.error('Action:', e.action);
+    console.error('Trigger:', e.trigger);
+  });
+
+  
 const tl = new TimelineMax();
 const width = window.innerWidth;
 const height = window.innerHeight;
