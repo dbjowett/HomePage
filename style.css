@@ -12,18 +12,6 @@ body {
     flex-direction: column;
 }
 
-.slider {
-    z-index: -1;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 74vh;
-    border-radius: 0px 0px 10px 10px;
-    background-color: #0e153a;
-}
-
-
 
 /* Navigation Start */
 nav {
@@ -97,7 +85,27 @@ nav li a {
 
 /* Navigation End */
 
+.slider {
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    min-width: 100%;
+    height: 700px;
+    background-color: #0e153a;
+}
 
+.shape svg{
+    padding-top: 80px;
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    /* border: 2px dashed pink; */
+}
+
+.shape .shape-fill {
+    fill: #0F1538;
+}
 
 
 section {
@@ -105,6 +113,7 @@ section {
     height: 50vh;
     justify-content: center;
     align-items: center;
+    /* background-color: #0F1538; */
     /* border: 3px dashed lightblue; */
 }
 
@@ -119,7 +128,7 @@ section {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    min-width: 390px;
+    min-width: 555px;
     border-radius: 10px;
 }
 
@@ -142,32 +151,7 @@ section {
     font-weight: 400;
 }
 
-.bottom {
-    height:30vh;
-    position: relative;
-    margin-top: 140px;
-}
 
-.shape {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: -1;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.shape svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 165px;
-}
-
-.shape .shape-fill {
-    fill: #0F1538;
-}
 
 .contact button:focus + ul {
     opacity: 1;
@@ -206,15 +190,22 @@ section {
 
 .aboutSection button {
     position: absolute;
-    top: 125px;
-    left: 320px;
+    top: 150px;
+    left: 300px;
     margin: 10px;
-    padding: 10px;
+    width: 140px;
+    height: 40px;
+    font-size: 1rem;
+    padding: 5px 15px;
     background-color: red;
     border: none;
-    border-radius: 5px;
+    border-radius: 15px;
     color: white;
     cursor: pointer;
+}
+
+.aboutSection button:active {
+    background-color: rgb(179, 0, 0);
 }
 
 .photoSection {
@@ -241,13 +232,11 @@ section {
 
 /* Bottom Diagonal Shape */
 .custom-shape-divider-bottom-1629420053 {
-    /* position: absolute; */
-    bottom: 0;
-    left: 0;
     width: 100%;
     overflow: hidden;
     line-height: 0;
     transform: rotate(180deg);
+    margin-bottom: -1px;
 }
 
 .custom-shape-divider-bottom-1629420053 svg {
@@ -268,7 +257,7 @@ section {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 100px;
+    padding-top: 150px;
 }
 
 .projects h1{
@@ -282,17 +271,46 @@ section {
     width: 600px;
     height: 400px;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 20px;
     margin: 100px;
     display: flex;
     flex-direction: row;
-
 }
 
-.img3 {
-    width: 500px;
-    clip-path: polygon(0,0,0,100);
-    background-image: url("./photos/Homepage.PNG");
+.projectContent {
+    min-width: 300px;
+    margin-left: -20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 50px;
+}
+
+.projectContent h4 {
+    font-size: 1.5rem;
+}
+
+.projectContent div {
+    margin: 20px 0 20px 0;
+    text-align: center;
+}
+
+.projectContent button {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    min-width: 100px;
+    border: none;
+    
+}
+
+.img {
+    clip-path: polygon(0 0, 100% 0, 50% 100%, 0% 100%);
+    opacity: 75%;
+    width: 300px;
+    object-fit: cover;
 }
 
 
