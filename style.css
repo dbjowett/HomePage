@@ -289,9 +289,10 @@ section {
 
 }
 
-.project img {
-    width: 300px;
+.img3 {
+    width: 500px;
     clip-path: polygon(0,0,0,100);
+    background-image: url("./photos/Homepage.PNG");
 }
 
 
