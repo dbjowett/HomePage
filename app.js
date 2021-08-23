@@ -39,7 +39,7 @@ const tl = new TimelineMax();
 // console.log('width: '+ width + '  height: ' + height)
 
 tl
-    .fromTo(hero, 1, {height: "0%"}, {height:`90%`, ease: Power2.easeInOut})
+    .fromTo(hero, 1, {height: "0%"}, {height:`100%`, ease: Power2.easeInOut})
     .fromTo(hero, 1.1, {width: "100%"}, {width: "80%", ease: Power2.easeInOut})
     .fromTo(slider, 1.1, {x: "-100%"},{x: "0%", ease: Power2.easeInOut}, "-=1")
     .fromTo(shape, 1.1, {x: "-100%"},{x: "0%", ease: Power2.easeInOut},"-=1.1")
