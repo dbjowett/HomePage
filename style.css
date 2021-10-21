@@ -20,11 +20,9 @@ body {
 /* Navigation Start */
 nav {
     min-height: 10vh;
-    padding-top: 55px;
+    padding-top: 35px;
     color: white;
-    z-index: 1;
-    /* margin-bottom: 120px; */
-    /* padding-bottom: 130px; */
+    background-color: #0F1538;
 }
 
 .navlist {
@@ -83,16 +81,6 @@ nav {
 }
 
 /* Navigation End ///////////////////////////////////////////////////////*/
-
-.slider {
-    z-index: -1;
-    height: 130vh;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    background-color: #0F1538;
-}
-
 .hero img {
     border-radius: 50%;
     max-width: 500px;
@@ -107,15 +95,17 @@ nav {
     align-items: center;
     justify-content: space-between;
     width: 75%;
+    max-width: 1100px;
 }
 
 section {
     display: flex;
-    height: 50vh;
     justify-content: center;
     align-items: center;
     position: relative;
-    padding-top: 450px;
+    padding-top: 0px;
+    padding-bottom: 55px;
+    background-color: #0F1538;
 }
 
 .headline {
@@ -129,6 +119,7 @@ section {
 .headline h1 {
     font-size: 50px;
     font-weight: 600;
+    min-width: 374px;
     color: white;
     padding-bottom: 50px;
 }
@@ -185,6 +176,7 @@ section {
     align-items: center;
     position: relative;
     max-width: 450px;
+    width: 90%;
     /* border: 1px solid rgb(0, 55, 255); */
     
 }
@@ -193,9 +185,11 @@ section {
     display: block;
     border: 1px solid black;
     width: 100%;
-    max-width: 400px;
+    min-width: 400px;
+    max-width: 200px;
     margin-bottom: 14px;
 }
+
 
 .aboutSection h1 {
     position: absolute;
@@ -282,6 +276,7 @@ section {
     border: 1px solid white;
 }
 
+/* Individual Projects ///////////////////////////////////// */
 .project {
     max-width: 600px;
     max-height: 400px;
@@ -290,11 +285,12 @@ section {
     border-radius: 20px;
     margin: 100px;
     display: flex;
-    flex-direction: row;
+    flex-direction:row;
+    /* flex-direction: column; */
 }
 
 .projectContent {
-    min-width: 300px;
+    max-width: 300px;
     margin-left: -20px;
     display: flex;
     flex-direction: column;
@@ -347,53 +343,13 @@ section {
         margin-right: 100px;
     }
     .projectContent h4 {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
     
     .projectContent div {
         font-size: 1rem;
     }
   }
-
-/* Scale projects size ///////////////////////////////// */
-/* @media (max-width: 640px) { 
-    .project {
-        scale: 90%;
-  } }
-  @media (max-width: 540px) { 
-    .project {
-        scale: 75%;
-  } 
-  .aboutSection div {
-      width: 80%;
-  }
-  .aboutSection h1 {
-    position: absolute;
-    top: -50px;
-    left: 40px;
-}
-    .aboutSection button {  
-        top: 160px;
-        left: 250px;
-    }
-}
-
-  @media (max-width: 440px) { 
-    .project {
-        scale: 55%;
-  }
-  .aboutSection button {  
-    top: 160px;
-    left: 230px;
-} 
-}
-  @media (max-width: 400px) { 
-    .project {
-        scale: 45%;
-  } } */
-
-/* Medium devices (tablets, 768px and up) */
-/* @media (min-width: 768px) { ... } */
 
 /* Medium devices (desktops, 1300px and down) */
 @media (max-width: 1300px) { 
@@ -402,7 +358,6 @@ section {
         flex-direction: column;
         align-items:center;
         justify-content: center;
-
     }
     .headline {
         align-items:center;
@@ -420,5 +375,67 @@ section {
     }
 }
 
+/* projects  ///////////////////////////////// */
+@media (max-width: 640px) {
+    .project {
+        max-height: 500px;
+        flex-direction: column;
+        align-items: center;
+        margin: 90px;
+    }
+    .projectContent {
+        max-width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 25px 0 25px 15px;
+        margin-top: -30px;
+    }
+    
+    .projectContent div {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .projectImg {
+        clip-path: polygon(0 0, 100% 0%, 100% 75%, 0 100%);
+        height: 0%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+  @media (max-width: 450px) { 
+    .hero img{ 
+        max-width: 300px;
+        height: 300px;
+    }
+    .aboutSection button {  
+    top: 160px;
+    left: 230px;
+    } 
+}
+
+@media (max-width: 400px) { 
+    .headline h1 {
+        font-size: 2.6rem;
+        padding-left: 40px;
+    }
+    .aboutSection button {  
+    top: 160px;
+    left: 230px;
+    } 
+}
+
+/* Medium devices (tablets, 768px and up) */
+/* @media (min-width: 768px) { ... } */
+
+
+
 /* Extra large devices (large desktops, 1200px and up) */
-/* @media (min-width: 1200px) { ... } */
+/* @media (min-width: 1200px) { 
+    nav {
+
+    }
+} */
