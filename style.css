@@ -22,7 +22,9 @@ nav {
     min-height: 10vh;
     padding-top: 55px;
     color: white;
-    margin-bottom: 120px;
+    z-index: 1;
+    /* margin-bottom: 120px; */
+    /* padding-bottom: 130px; */
 }
 
 .navlist {
@@ -31,7 +33,6 @@ nav {
     justify-content: flex-end;
     list-style-type: none;
     padding-right: 10%;
-    z-index: 2;
 }
 
 .navlist li, .navlist button {
@@ -85,9 +86,10 @@ nav {
 
 .slider {
     z-index: -1;
-    height: 100vh;
+    height: 130vh;
     width: 100%;
     position: absolute;
+    top: 0;
     background-color: #0F1538;
 }
 
@@ -113,6 +115,7 @@ section {
     justify-content: center;
     align-items: center;
     position: relative;
+    padding-top: 450px;
 }
 
 .headline {
@@ -120,6 +123,7 @@ section {
     align-items: flex-start;
     justify-content: space-around;
     flex-direction: column;
+    
 }
 
 .headline h1 {
@@ -170,7 +174,7 @@ section {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: 500px;
+    margin-top: 700px;
     margin-bottom: 500px;
     /* border: 1px solid red; */
 }
@@ -189,6 +193,7 @@ section {
     display: block;
     border: 1px solid black;
     width: 100%;
+    max-width: 400px;
     margin-bottom: 14px;
 }
 
@@ -351,7 +356,7 @@ section {
   }
 
 /* Scale projects size ///////////////////////////////// */
-@media (max-width: 640px) { 
+/* @media (max-width: 640px) { 
     .project {
         scale: 90%;
   } }
@@ -375,7 +380,7 @@ section {
 
   @media (max-width: 440px) { 
     .project {
-        scale: 65%;
+        scale: 55%;
   }
   .aboutSection button {  
     top: 160px;
@@ -384,8 +389,8 @@ section {
 }
   @media (max-width: 400px) { 
     .project {
-        scale: 55%;
-  } }
+        scale: 45%;
+  } } */
 
 /* Medium devices (tablets, 768px and up) */
 /* @media (min-width: 768px) { ... } */
